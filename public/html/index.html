@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/output.css" />
+        <script src="../js/script.js" defer></script>
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Trade+Winds&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Document</title>
+    </head>
+    <body class="bg-Charcoal_Grey">
+        <main>
+            <!-- Container -->
+            <div
+                id="modal_primary"
+                class=" bg-white flex flex-row justify-around items-center w-[100%] max-w-[900px] p-6 rounded-3xl fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-md:flex-col-reverse max-md:p-0 max-md:h-[100vh] max-md:justify-between">
+                <!-- TEXT -->
+                <div class="flex flex-col p-16 gap-6">
+                    <h1 class="font-bold text-Dark_Slate_Grey font-roboto text-6xl">Stay update!</h1>
+                    <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-4">
+                            <img class="max-w-6" src="../../assets/images/icon-success.svg" alt="Success" />
+                            <p>Product discovery building what matters</p>
+                        </li>
+                        <li class="flex gap-4">
+                            <img class="max-w-6" src="../../assets/images/icon-success.svg" alt="Success" />
+                            <p>Measuring to ensure updates are a success</p>
+                        </li>
+                        <li class="flex gap-4">
+                            <img class="max-w-6" src="../../assets/images/icon-success.svg" alt="Success" />
+                            <p>And much more!</p>
+                        </li>
+                    </ul>
+
+                    <form class="flex flex-col gap-4" id="form">
+                        <div class="flex flex-col">
+                          <div class="flex justify-between text-sm font-medium">
+                            <label for="mail"><p>Email address</p></label>
+                            <p id="errors_text" class="text-red-500"></p>
+                          </div>
+                            
+                            <input class="p-3 rounded-lg border-solid border-black border-[1px]" type="email" id="mail" placeholder="E-mail" />
+                        </div>
+
+                        <button id="btn_enviar" class="bg-Dark_Slate_Grey p-4 rounded-xl text-white font-bold shadow-Tomato-500/50 
+                            transition-all duration-300 ease-in-out 
+                            hover:bg-gradient-to-r hover:from-[#FF537A] hover:to-[#FF693E] hover:shadow-button_Principal" type="submit">
+                          Subscribe to monthly newsletter
+                        </button>
+
+
+                    </form>
+                </div>
+                <!-- IMG -->
+                <div>
+                    <img class="max-md:w-[100vw]" id="img" src="../../assets/images/illustration-sign-up-mobile.svg" alt="Ilustração" />
+                </div>
+            </div>
+
+            <!-- Modal Success -->
+            <div id="modal_success" class="hidden">
+              <!-- Container de texto -->
+              <div
+                class="bg-white flex flex-col gap-6 max-md:gap-12 max-w-[500px] w-[100%] p-12 rounded-3xl fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-md:h-[100vh] max-md:max-w-[100vw] max-md:flex-col">
+                <img class="max-w-12 max-md:max-w-16" src="../../assets/images/icon-success.svg" alt="Success">
+            
+                <h1 class="font-bold text-Dark_Slate_Grey font-roboto text-6xl">Thanks for<br>Subscribing!</h1>
+            
+                <p>A confirmation email been sent to <b>ash@loremcompany.com</b>. Please open it and click the button inside to
+                  confirm your subscription.</p>
+            
+                <div class="mt-auto">
+                  <button
+                    id="btn_success"
+                    class="bg-Dark_Slate_Grey w-[100%] p-4 rounded-xl text-white font-bold shadow-Tomato-500/50 transition-shadow">
+                    Dismiss message
+                  </button>
+                </div>
+              </div>
+            </div>
+
+        </main>
+    </body>
+</html>
